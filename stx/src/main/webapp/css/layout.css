@@ -1,0 +1,83 @@
+/* a, span, em, input */
+body {
+  font-family: "Lato", "Pretendard", sans-serif;
+  font-size: 16px;
+  color: #111;
+  min-height: 3000px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  z-index: 99;
+  transition: all 0.25s ease;
+}
+.header:before {
+  content: "";
+  display: block;
+  height: 80px;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.header:after {
+  content: "";
+  display: block;
+  height: 400px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 80px;
+  z-index: -1;
+}
+.header.on {
+  height: 350px;
+}
+.header .logo a {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+.header .logo a img {
+  height: 30px;
+}
+.header .gnb__list {
+  display: flex;
+  justify-content: center;
+}
+.header .gnb__list > li > a {
+  font-size: 18px;
+  font-weight: 700;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+.header .gnb__list--sub {
+  padding: 30px 0;
+  color: #fff;
+}
+.header .gnb__list--sub li a {
+  display: block;
+  padding: 5px 0 5px 40px;
+}
+.header .language {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  gap: 0 20px;
+  font-weight: 700;
+}
+.header .language .on {
+  color: rgb(4, 63, 189);
+}
